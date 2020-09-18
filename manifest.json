@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "Firefox tab audio volume",
+    "version": "1.0",
+    "description": "Manage the audio volume of a especific tab in firefox",
+    "icons": {
+        "48": "images/icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": ["main.js"]
+        }
+    ],
+    "browser_action": {
+        "default_icon": "images/icon.png",
+        "default_title": "Firefox tab audio volume",
+        "default_popup": "popup/manage-audio.html"
+    },
+    "permissions": [
+        "http://*/*",
+        "https://*/*",
+        "activeTab",
+        "tabs",
+        "storage"
+    ]
+}
