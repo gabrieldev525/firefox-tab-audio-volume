@@ -17,7 +17,7 @@ const init = async () => {
     .then(result => volume = result.tab_audio_volume)
 
   if(!volume)
-    tab_audio_volume = 1
+    volume = 1
 
   volumeBar.value = volume
 }
